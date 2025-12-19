@@ -5,7 +5,7 @@ test('Register new User test', async ({page}) => {
 
     const registerAndDeleteUserPage = new RegisterAndDeleteUserPage(page);
 
-    await registerAndDeleteUserPage.navigateToSignupPage('jo235rqew234hn', 'john@ex234425ample.com');
+    await registerAndDeleteUserPage.navigateToSignupPage('jo235rqew234h532n', 'joh5344n@ex234425ample.com');
 
     await registerAndDeleteUserPage.fillAccountInformation(
         'password123',
@@ -29,8 +29,4 @@ test('Register new User test', async ({page}) => {
     await page.locator('.pull-right .btn-primary').click();
 
     await expect(page.locator('.shop-menu .nav .fa-user')).toBeVisible();
-
-    await registerAndDeleteUserPage.deleteAccount();
-
-
 })

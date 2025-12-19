@@ -65,3 +65,4 @@ export class RegisterAndDeleteUserPage {
         await this.page.locator('.pull-right .btn-primary').click();
     }
 }
+
