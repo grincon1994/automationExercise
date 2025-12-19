@@ -58,6 +58,7 @@ export class RegisterAndDeleteUserPage {
     }
 
     async deleteAccount() {
+        
         await this.page.locator('.shop-menu .nav .fa-trash-o').click();
 
         await expect(this.page.getByText('Account Deleted!')).toBeVisible();
