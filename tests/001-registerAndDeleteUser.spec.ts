@@ -1,11 +1,11 @@
 import {test, expect} from '@playwright/test';
-import { RegisterAndDeleteUserPage } from '../src/pages/registerAndDeleteUser';
+import { RegisterAndDeleteUserPage } from '../src/pages/registerAndDeleteUserPage';
 
 test('Register new User test', async ({page}) => {
 
     const registerAndDeleteUserPage = new RegisterAndDeleteUserPage(page);
 
-    await registerAndDeleteUserPage.navigateToSignupPage('jo235rqew234h532n', 'joh5344n@ex234425ample.com');
+    await registerAndDeleteUserPage.navigateToSignupPage('jo235rqew234h532n', 'joh53434n@ex234425ample.com');
 
     await registerAndDeleteUserPage.fillAccountInformation(
         'password123',
@@ -29,4 +29,8 @@ test('Register new User test', async ({page}) => {
     await page.locator('.pull-right .btn-primary').click();
 
     await expect(page.locator('.shop-menu .nav .fa-user')).toBeVisible();
+
+    registerAndDeleteUserPage.deleteAccount();
+
+    await expect(page.getByText('Account Deleted!')).toBeVisible();
 })

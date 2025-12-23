@@ -13,7 +13,7 @@ export class LoginPage {
 
         const loginForm =this.page.locator('.login-form');
 
-        await expect(loginForm).toHaveText('Login to your account');
+        await expect(loginForm.getByRole('heading', {name: 'Login to your account'})).toHaveText('Login to your account');
 
         await loginForm.getByPlaceholder('Email Address').fill(username);
         await loginForm.getByPlaceholder('Password').fill(password);

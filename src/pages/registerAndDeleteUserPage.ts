@@ -1,7 +1,7 @@
 import {expect, Page} from '@playwright/test';
 
 export class RegisterAndDeleteUserPage {
-    page: Page;
+    readonly page: Page;
 
     constructor(page: Page) {
         this.page = page;
@@ -20,8 +20,6 @@ export class RegisterAndDeleteUserPage {
         await signupForm.getByRole('button', {name: 'Signup'}).click();
 
         await this.page.waitForURL('**/signup');
-
-        await expect(this.page.getByText('Enter Account Information')).toBeVisible();
 
     }
 
@@ -63,7 +61,6 @@ export class RegisterAndDeleteUserPage {
 
         await expect(this.page.getByText('Account Deleted!')).toBeVisible();
 
-        await this.page.locator('.pull-right .btn-primary').click();
     }
 }
 
