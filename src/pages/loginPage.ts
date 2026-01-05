@@ -7,6 +7,10 @@ export class LoginPage {
         this.page = page;
     }
 
+    async goto() {
+        await this.page.goto('https://automationexercise.com');
+    }
+
     async login(username: string, password: string){
 
         await this.page.goto('https://automationexercise.com/login');
