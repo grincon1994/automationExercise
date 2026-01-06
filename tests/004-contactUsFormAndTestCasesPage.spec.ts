@@ -21,10 +21,16 @@ test('Contact Us form', async ({page}) => {
 
     await contactUsForm.uploadFile();
 
-    page.on('dialog', async dialog => {
+    try {
+        page.on('dialog', async dialog => {
         await dialog.accept('Press OK to proceed!'); // or dialog.dismiss()
-    });
+        });
+    }
 
+    catch (e) {
+        console.log(`No dialog appeared: ${e}`);
+    }
+    
     await page.locator('.contact-form').getByRole('button', {name: 'Submit'}).click();
 
     await expect(page.locator('.contact-form')).toContainText('Success! Your details have been submitted successfully.');
