@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "playwright test",
-    "test:ci": "playwright test --reporter=line,junit"
+    "test:ci": "playwright test --reporter=line,,html,junit --reporter-options=outputFile=test-results/junit.xml"
   },
   "repository": {
     "type": "git",

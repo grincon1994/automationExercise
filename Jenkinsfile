@@ -16,8 +16,7 @@ pipeline {
     stage('Test') {
       steps {
         bat '''
-          cd /d %WORKSPACE%
-          npx playwright test
+          npm run test:ci
         '''
       }
     }
@@ -34,7 +33,7 @@ pipeline {
       if exist playwright-report dir playwright-report
     '''
       junit 'test-results/junit.xml'
-      
+
       archiveArtifacts artifacts: 'playwright-report/**', allowEmptyArchive: false
       archiveArtifacts artifacts: 'test-results/**', allowEmptyArchive: false
     }
