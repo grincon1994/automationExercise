@@ -24,7 +24,7 @@ pipeline {
     }
 
     stage('Run Playwright Tests') {
-      steps { sh 'npm run test:ci' }
+      steps { sh 'npx playwright test' }
       post {
         always {
           junit 'test-results/junit.xml'
