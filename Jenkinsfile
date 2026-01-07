@@ -18,7 +18,7 @@ pipeline {
           dir node_modules\\@playwright
           dir node_modules\\.bin | findstr /i playwright
 
-          px --no-install playwright --version
+          npx --no-install playwright --version
           
 
         '''
