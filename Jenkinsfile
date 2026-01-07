@@ -28,18 +28,6 @@ pipeline {
     }
   }
 
-  stage('Debug') {
-      steps {
-        bat '''
-        cd /d "%WORKSPACE%"
-        node -v
-        npm -v
-        dir
-        if exist node_modules\\@playwright\\test (echo "OK: @playwright/test exists") else (echo "MISSING: @playwright/test")
-        '''
-    } 
-}
-
   post {
     always {
       bat '''
