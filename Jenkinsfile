@@ -28,7 +28,8 @@ pipeline {
     stage('Test') {
       steps {
         bat '''
-          npm run test:ci
+          cd /d "%WORKSPACE%"
+          npx --no-install playwright test --reporter=line,html,junit
         '''
       }
     }
