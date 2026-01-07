@@ -18,7 +18,9 @@ pipeline {
     }
 
     stage('Install') {
-      steps { sh 'npm ci' }
+      steps { sh '''node -v
+      npm -v
+      npm ci''' }
     }
 
     stage('Run Playwright Tests') {
