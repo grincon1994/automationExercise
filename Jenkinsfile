@@ -25,9 +25,18 @@ pipeline {
 
   post {
     always {
-      junit 'test-results/**/*.xml', allowEmptyResults: true
-      archiveArtifacts artifacts: 'playwright-report/**', allowEmptyArchive: true
-      archiveArtifacts artifacts: 'test-results/**', allowEmptyArchive: true
+      bat '''
+      echo ===== Workspace contents =====
+      dir
+      echo ===== test-results =====
+      if exist test-results dir test-results
+      echo ===== playwright-report =====
+      if exist playwright-report dir playwright-report
+    '''
+      junit 'test-results/junit.xml'
+      
+      archiveArtifacts artifacts: 'playwright-report/**', allowEmptyArchive: false
+      archiveArtifacts artifacts: 'test-results/**', allowEmptyArchive: false
     }
   }
 }
