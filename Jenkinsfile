@@ -5,6 +5,8 @@ pipeline {
     stage('Install') {
       steps {
         bat '''
+          set NODE_ENV=development
+          set npm_config_production=false
           node -v
           npm -v
           npm ci
@@ -12,7 +14,7 @@ pipeline {
           echo "@playwright/test not installed!"
           exit /b 1
         )
-          npx playwright install
+          npx playwright install --with-deps
         '''
       }
     }
@@ -25,6 +27,18 @@ pipeline {
       }
     }
   }
+
+  stage('Debug') {
+      steps {
+        bat '''
+        cd /d "%WORKSPACE%"
+        node -v
+        npm -v
+        dir
+        if exist node_modules\\@playwright\\test (echo "OK: @playwright/test exists") else (echo "MISSING: @playwright/test")
+        '''
+    } 
+}
 
   post {
     always {

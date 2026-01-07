@@ -1,9 +1,9 @@
-import {expect, Page} from '@playwright/test';
+import { expect, Page } from '@playwright/test';
 
 export class LoginPage {
     readonly page: Page;
 
-    constructor(page: Page){
+    constructor(page: Page) {
         this.page = page;
     }
 
@@ -11,17 +11,17 @@ export class LoginPage {
         await this.page.goto('https://automationexercise.com');
     }
 
-    async login(username: string, password: string){
+    async login(username: string, password: string) {
 
         await this.page.goto('https://automationexercise.com/login');
 
-        const loginForm =this.page.locator('.login-form');
+        const loginForm = this.page.locator('.login-form');
 
-        await expect(loginForm.getByRole('heading', {name: 'Login to your account'})).toHaveText('Login to your account');
+        await expect(loginForm.getByRole('heading', { name: 'Login to your account' })).toHaveText('Login to your account');
 
         await loginForm.getByPlaceholder('Email Address').fill(username);
         await loginForm.getByPlaceholder('Password').fill(password);
-        await loginForm.getByRole('button', {name: 'Login'}).click();
+        await loginForm.getByRole('button', { name: 'Login' }).click();
 
     }
 }
