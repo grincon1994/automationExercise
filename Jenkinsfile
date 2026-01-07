@@ -8,6 +8,10 @@ pipeline {
           node -v
           npm -v
           npm ci
+          if not exist node_modules\\@playwright\\test (
+          echo "@playwright/test not installed!"
+          exit /b 1
+        )
           npx playwright install
         '''
       }
