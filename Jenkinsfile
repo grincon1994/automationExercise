@@ -19,6 +19,7 @@ pipeline {
         bat '''
           cd /d %WORKSPACE%
           npx playwright test
+          npx playwright show-report
         '''
       }
     }
