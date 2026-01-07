@@ -24,7 +24,7 @@ export default defineConfig({
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
   reporter: [
     ['line'], 
-    ['junit', {outputFile: 'test-results/junit.xml'}], 
+    ['junit', {outputFile: 'test-results/results.xml'}], 
     ['html', {open: 'never', outputFolder: 'playwright-report'}]],
 
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
