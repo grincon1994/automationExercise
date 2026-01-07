@@ -5,8 +5,6 @@ pipeline {
     stage('Install') {
       steps {
         bat '''
-          cd /d "%WORKSPACE%"
-          echo WORKSPACE=%CD%
           node -v
           npm -v
           npm ci
@@ -14,13 +12,7 @@ pipeline {
           echo "@playwright/test not installed!"
           exit /b 1
         )
-
-          dir node_modules\\@playwright
-          dir node_modules\\.bin | findstr /i playwright
-
-          npx --no-install playwright --version
-          
-
+          npx playwright install
         '''
       }
     }
@@ -28,8 +20,7 @@ pipeline {
     stage('Test') {
       steps {
         bat '''
-          cd /d "%WORKSPACE%"
-          npx --no-install playwright test --reporter=line,html,junit
+          npm run test:ci
         '''
       }
     }
