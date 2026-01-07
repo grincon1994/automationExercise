@@ -5,7 +5,8 @@ pipeline {
     stage('Install') {
       steps {
         bat '''
-          cd /d %WORKSPACE%
+          node -v
+          npm -v
           npm ci
           npx playwright install
         '''
@@ -17,7 +18,6 @@ pipeline {
         bat '''
           cd /d %WORKSPACE%
           npx playwright test
-          npx playwright show-report
         '''
       }
     }
@@ -25,6 +25,7 @@ pipeline {
 
   post {
     always {
+      junit 'test-results/**/*.xml', allowEmptyResults: true
       archiveArtifacts artifacts: 'playwright-report/**', allowEmptyArchive: true
       archiveArtifacts artifacts: 'test-results/**', allowEmptyArchive: true
     }
