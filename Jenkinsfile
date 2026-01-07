@@ -34,8 +34,8 @@ pipeline {
     '''
       junit 'test-results/junit.xml'
 
-      archiveArtifacts artifacts: 'playwright-report/**', allowEmptyArchive: false
-      archiveArtifacts artifacts: 'test-results/**', allowEmptyArchive: false
+      archiveArtifacts artifacts: 'playwright-report/**'
+      archiveArtifacts artifacts: 'test-results/**'
     }
   }
 }
