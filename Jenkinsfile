@@ -6,8 +6,6 @@ pipeline {
       steps {
         bat '''
           cd /d %WORKSPACE%
-          node -v
-          npm -v
           npm ci
           npx playwright install
         '''
