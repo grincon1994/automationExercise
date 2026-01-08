@@ -47,10 +47,10 @@ pipeline {
       echo ===== playwright-report =====
       if exist playwright-report dir playwright-report
     '''
-      junit testResults: 'test-results/**/*.xml'
+      junit testResults: 'test-results/**/*.xml', allowEmptyResults: true
 
-      archiveArtifacts artifacts: 'playwright-report/**'
-      archiveArtifacts artifacts: 'test-results/**'
+      archiveArtifacts artifacts: 'playwright-report/**', allowEmptyArchive: true
+      archiveArtifacts artifacts: 'test-results/**', allowEmptyArchive: true
     }
   }
 }
