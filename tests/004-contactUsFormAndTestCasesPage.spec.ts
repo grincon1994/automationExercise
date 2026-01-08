@@ -24,9 +24,14 @@ test('Contact Us form', async ({page}) => {
     await contactUsForm.uploadFile(filePath);
 
     try {
+
         page.on('dialog', async dialog => {
-        await dialog.accept('Press OK to proceed!'); // or dialog.dismiss()
+            await dialog.accept('Press OK to proceed!'); // or dialog.dismiss()
         });
+
+        // page.on('dialog', async dialog => {
+        //     await dialog.dismiss(); // or dialog.dismiss()
+        // });
     }
 
     catch (e) {
