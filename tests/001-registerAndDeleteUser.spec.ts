@@ -1,11 +1,11 @@
 import {test, expect} from '@playwright/test';
 import { RegisterAndDeleteUserPage } from '../src/pages/registerAndDeleteUserPage';
 
-test.skip('Register new User test', async ({page}) => {
+test('Register new User test', async ({page}) => {
 
     const registerAndDeleteUserPage = new RegisterAndDeleteUserPage(page);
 
-    await registerAndDeleteUserPage.navigateToSignupPage('jo235rqew234h532n', 'joh53sh434n@ex234425ample.com');
+    await registerAndDeleteUserPage.navigateToSignupPage('jo235rqew234h532n', 'joh53sh434n@ex2-34425ample.com');
 
     await registerAndDeleteUserPage.fillAccountInformation(
         'password123',
@@ -21,6 +21,10 @@ test.skip('Register new User test', async ({page}) => {
         '12345',
         '1234567890'
     );
+
+    page.on('dialog', async dialog => {
+        await dialog.dismiss();
+    })
     
     await expect(page.getByText('Account Created!')).toBeVisible();
 
