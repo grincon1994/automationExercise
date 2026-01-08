@@ -1,22 +1,6 @@
-<testsuites id="" name="" tests="7" failures="1" skipped="0" errors="0" time="23.307005000000004">
-<testsuite name="001-registerAndDeleteUser.spec.ts" timestamp="2026-01-08T03:49:44.763Z" hostname="chromium" tests="1" failures="0" skipped="0" time="6.397" errors="0">
-<testcase name="Register new User test" classname="001-registerAndDeleteUser.spec.ts" time="6.397">
-</testcase>
-</testsuite>
-<testsuite name="002-Login.spec.ts" timestamp="2026-01-08T03:49:44.763Z" hostname="chromium" tests="2" failures="0" skipped="0" time="3.856" errors="0">
-<testcase name="login with correct credentials" classname="002-Login.spec.ts" time="2.223">
-</testcase>
-<testcase name="login with incorrect credentials" classname="002-Login.spec.ts" time="1.633">
-</testcase>
-</testsuite>
-<testsuite name="003-logoutAndRegisterWithSameEmail.spec.ts" timestamp="2026-01-08T03:49:44.763Z" hostname="chromium" tests="2" failures="0" skipped="0" time="4.591" errors="0">
-<testcase name="Login out of the account" classname="003-logoutAndRegisterWithSameEmail.spec.ts" time="2.057">
-</testcase>
-<testcase name="Register with same Email" classname="003-logoutAndRegisterWithSameEmail.spec.ts" time="2.534">
-</testcase>
-</testsuite>
-<testsuite name="004-contactUsFormAndTestCasesPage.spec.ts" timestamp="2026-01-08T03:49:44.763Z" hostname="chromium" tests="2" failures="1" skipped="0" time="6.415" errors="0">
-<testcase name="Contact Us form" classname="004-contactUsFormAndTestCasesPage.spec.ts" time="1.866">
+<testsuites id="" name="" tests="2" failures="1" skipped="0" errors="0" time="6.37512900000019">
+<testsuite name="004-contactUsFormAndTestCasesPage.spec.ts" timestamp="2026-01-08T04:24:35.704Z" hostname="chromium" tests="2" failures="1" skipped="0" time="4.313" errors="0">
+<testcase name="Contact Us form" classname="004-contactUsFormAndTestCasesPage.spec.ts" time="2.729">
 <failure message="004-contactUsFormAndTestCasesPage.spec.ts:6:5 Contact Us form" type="FAILURE">
 <![CDATA[  [chromium] › 004-contactUsFormAndTestCasesPage.spec.ts:6:5 › Contact Us form ─────────────────────
 
@@ -57,7 +41,7 @@
 ]]>
 </system-out>
 </testcase>
-<testcase name="Test Cases page" classname="004-contactUsFormAndTestCasesPage.spec.ts" time="4.549">
+<testcase name="Test Cases page" classname="004-contactUsFormAndTestCasesPage.spec.ts" time="1.584">
 </testcase>
 </testsuite>
 </testsuites>
