@@ -11,8 +11,14 @@ pipeline {
           echo ===== Installing dependencies =====
           npm ci
 
+          echo ===== Playwright Version =====
+          npx playwright --version
+
           echo ===== Installing Playwright browsers =====
-          npx playwright install 
+          npx playwright install --with-deps
+
+          echo ===== Verify browsers folder =====
+          dir "%USERPROFILE%\\AppData\\Local\\ms-playwright" || echo "ms-playwright folder not found yet"
         '''
       }
     }
