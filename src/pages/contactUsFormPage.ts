@@ -24,7 +24,7 @@ export class ContactUsForm {
 
         const contactUsForm = this.page.locator('.contact-form');
 
-        await contactUsForm.locator('input[type=file]').setInputFiles('C:\\Users\\grinc\\Downloads\\GodMode9i.dsi');
+        await contactUsForm.locator('input[type=file]').setInputFiles('C:\\Users\\rincog3\\Downloads\\Resume202512190924.pdf');
 
     }
 }

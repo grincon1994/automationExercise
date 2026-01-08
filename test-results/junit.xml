@@ -1,30 +1,6 @@
-<testsuites id="" name="" tests="7" failures="0" skipped="1" errors="0" time="16.328947000000014">
-<testsuite name="001-registerAndDeleteUser.spec.ts" timestamp="2026-01-08T04:53:43.813Z" hostname="chromium" tests="1" failures="0" skipped="1" time="0" errors="0">
-<testcase name="Register new User test" classname="001-registerAndDeleteUser.spec.ts" time="0">
-<properties>
-<property name="skip" value="">
-</property>
-</properties>
-<skipped>
-</skipped>
-</testcase>
-</testsuite>
-<testsuite name="002-Login.spec.ts" timestamp="2026-01-08T04:53:43.813Z" hostname="chromium" tests="2" failures="0" skipped="0" time="3.908" errors="0">
-<testcase name="login with correct credentials" classname="002-Login.spec.ts" time="2.378">
-</testcase>
-<testcase name="login with incorrect credentials" classname="002-Login.spec.ts" time="1.53">
-</testcase>
-</testsuite>
-<testsuite name="003-logoutAndRegisterWithSameEmail.spec.ts" timestamp="2026-01-08T04:53:43.813Z" hostname="chromium" tests="2" failures="0" skipped="0" time="5.894" errors="0">
-<testcase name="Login out of the account" classname="003-logoutAndRegisterWithSameEmail.spec.ts" time="2.352">
-</testcase>
-<testcase name="Register with same Email" classname="003-logoutAndRegisterWithSameEmail.spec.ts" time="3.542">
-</testcase>
-</testsuite>
-<testsuite name="004-contactUsFormAndTestCasesPage.spec.ts" timestamp="2026-01-08T04:53:43.813Z" hostname="chromium" tests="2" failures="0" skipped="0" time="4.239" errors="0">
-<testcase name="Contact Us form" classname="004-contactUsFormAndTestCasesPage.spec.ts" time="2.764">
-</testcase>
-<testcase name="Test Cases page" classname="004-contactUsFormAndTestCasesPage.spec.ts" time="1.475">
+<testsuites id="" name="" tests="1" failures="0" skipped="0" errors="0" time="6.164315999999875">
+<testsuite name="004-contactUsFormAndTestCasesPage.spec.ts" timestamp="2026-01-08T15:58:16.446Z" hostname="chromium" tests="1" failures="0" skipped="0" time="3.465" errors="0">
+<testcase name="Contact Us form" classname="004-contactUsFormAndTestCasesPage.spec.ts" time="3.465">
 </testcase>
 </testsuite>
 </testsuites>
