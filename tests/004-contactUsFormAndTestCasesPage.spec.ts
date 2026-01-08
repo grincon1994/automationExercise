@@ -23,20 +23,7 @@ test('Contact Us form', async ({page}) => {
 
     await contactUsForm.uploadFile(filePath);
 
-    try {
-
-        page.on('dialog', async dialog => {
-            await dialog.accept('Press OK to proceed!'); // or dialog.dismiss()
-        });
-
-        // page.on('dialog', async dialog => {
-        //     await dialog.dismiss(); // or dialog.dismiss()
-        // });
-    }
-
-    catch (e) {
-        console.log(`No dialog appeared: ${e}`);
-    }
+    page.once('dialog', dialog => dialog.accept('Press OK to proceed!')); // or dialog.dismiss();
     
     await page.locator('.contact-form').getByRole('button', {name: 'Submit'}).click();
 

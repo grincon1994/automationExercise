@@ -1,24 +1,6 @@
-<testsuites id="" name="" tests="7" failures="0" skipped="0" errors="0" time="34.09490000000037">
-<testsuite name="001-registerAndDeleteUser.spec.ts" timestamp="2026-01-08T18:31:53.800Z" hostname="chromium" tests="1" failures="0" skipped="0" time="9.507" errors="0">
-<testcase name="Register new User test" classname="001-registerAndDeleteUser.spec.ts" time="9.507">
-</testcase>
-</testsuite>
-<testsuite name="002-Login.spec.ts" timestamp="2026-01-08T18:31:53.800Z" hostname="chromium" tests="2" failures="0" skipped="0" time="6.121" errors="0">
-<testcase name="login with correct credentials" classname="002-Login.spec.ts" time="3.808">
-</testcase>
-<testcase name="login with incorrect credentials" classname="002-Login.spec.ts" time="2.313">
-</testcase>
-</testsuite>
-<testsuite name="003-logoutAndRegisterWithSameEmail.spec.ts" timestamp="2026-01-08T18:31:53.800Z" hostname="chromium" tests="2" failures="0" skipped="0" time="8.966" errors="0">
-<testcase name="Login out of the account" classname="003-logoutAndRegisterWithSameEmail.spec.ts" time="3.929">
-</testcase>
-<testcase name="Register with same Email" classname="003-logoutAndRegisterWithSameEmail.spec.ts" time="5.037">
-</testcase>
-</testsuite>
-<testsuite name="004-contactUsFormAndTestCasesPage.spec.ts" timestamp="2026-01-08T18:31:53.800Z" hostname="chromium" tests="2" failures="0" skipped="0" time="6.967" errors="0">
-<testcase name="Contact Us form" classname="004-contactUsFormAndTestCasesPage.spec.ts" time="4.083">
-</testcase>
-<testcase name="Test Cases page" classname="004-contactUsFormAndTestCasesPage.spec.ts" time="2.884">
+<testsuites id="" name="" tests="1" failures="0" skipped="0" errors="0" time="8.87639300000001">
+<testsuite name="004-contactUsFormAndTestCasesPage.spec.ts" timestamp="2026-01-08T19:03:51.731Z" hostname="chromium" tests="1" failures="0" skipped="0" time="6.151" errors="0">
+<testcase name="Contact Us form" classname="004-contactUsFormAndTestCasesPage.spec.ts" time="6.151">
 </testcase>
 </testsuite>
 </testsuites>
