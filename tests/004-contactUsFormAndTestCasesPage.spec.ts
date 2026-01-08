@@ -1,13 +1,15 @@
 import {test, expect} from '@playwright/test';
 import {LoginPage} from '../src/pages/loginPage';
 import {ContactUsForm} from '../src/pages/contactUsFormPage';
-
+import path from "path";
 
 test('Contact Us form', async ({page}) => {
     
     const gotoHomePage = new LoginPage(page);
 
     const contactUsForm = new ContactUsForm(page);
+
+    const filePath = path.resolve(process.cwd(), 'IPG User Guide (2).pdf')
 
     await gotoHomePage.goto();
 
@@ -19,7 +21,7 @@ test('Contact Us form', async ({page}) => {
 
     await expect(page.locator('.contact-form h2')).toContainText('Get In Touch');
 
-    await contactUsForm.uploadFile();
+    await contactUsForm.uploadFile(filePath);
 
     try {
         page.on('dialog', async dialog => {

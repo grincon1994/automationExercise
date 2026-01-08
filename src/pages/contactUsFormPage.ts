@@ -20,11 +20,11 @@ export class ContactUsForm {
         await contactUsForm.getByPlaceholder('Your Message Here').fill(message);
     }
 
-    async uploadFile(){
+    async uploadFile(pathToFile:string){
 
         const contactUsForm = this.page.locator('.contact-form');
 
-        await contactUsForm.locator('input[type=file]').setInputFiles('C:\\Users\\rincog3\\Downloads\\Resume202512190924.pdf');
+        await contactUsForm.locator('input[type=file]').setInputFiles(pathToFile);
 
     }
 }
