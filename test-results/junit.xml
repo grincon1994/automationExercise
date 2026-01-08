@@ -1,42 +1,6 @@
-<testsuites id="" name="" tests="1" failures="1" skipped="0" errors="0" time="32.779391999999994">
-<testsuite name="001-registerAndDeleteUser.spec.ts" timestamp="2026-01-08T19:16:28.508Z" hostname="chromium" tests="1" failures="1" skipped="0" time="30.148" errors="0">
-<testcase name="Register new User test" classname="001-registerAndDeleteUser.spec.ts" time="30.148">
-<failure message="001-registerAndDeleteUser.spec.ts:4:5 Register new User test" type="FAILURE">
-<![CDATA[  [chromium] › 001-registerAndDeleteUser.spec.ts:4:5 › Register new User test ──────────────────────
-
-    Test timeout of 30000ms exceeded.
-
-    Error: locator.check: Test timeout of 30000ms exceeded.
-    Call log:
-      - waiting for locator('.login-form').locator('.radio #id_gender1')
-
-
-       at ..\src\pages\registerAndDeleteUserPage.ts:33
-
-      31 |         const newUserForm = this.page.locator('.login-form');
-      32 |
-    > 33 |         await newUserForm.locator('.radio #id_gender1').check();
-         |                                                         ^
-      34 |
-      35 |         await newUserForm.locator('#password').fill(password);
-      36 |
-        at RegisterAndDeleteUserPage.fillAccountInformation (C:\Users\rincog3\OneDrive - Medtronic PLC\Documents\playwright-course\automationExercise\src\pages\registerAndDeleteUserPage.ts:33:57)
-        at C:\Users\rincog3\OneDrive - Medtronic PLC\Documents\playwright-course\automationExercise\tests\001-registerAndDeleteUser.spec.ts:10:37
-
-    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
-    ..\test-results\001-registerAndDeleteUser-Register-new-User-test-chromium\test-failed-1.png
-    ────────────────────────────────────────────────────────────────────────────────────────────────
-
-    Error Context: ..\test-results\001-registerAndDeleteUser-Register-new-User-test-chromium\error-context.md
-]]>
-</failure>
-<system-out>
-<![CDATA[
-[[ATTACHMENT|001-registerAndDeleteUser-Register-new-User-test-chromium\test-failed-1.png]]
-
-[[ATTACHMENT|001-registerAndDeleteUser-Register-new-User-test-chromium\error-context.md]]
-]]>
-</system-out>
+<testsuites id="" name="" tests="1" failures="0" skipped="0" errors="0" time="6.094933000000194">
+<testsuite name="005 verifyAndSearchProducts.spec.ts" timestamp="2026-01-08T21:18:42.783Z" hostname="chromium" tests="1" failures="0" skipped="0" time="3.24" errors="0">
+<testcase name="Search Products" classname="005 verifyAndSearchProducts.spec.ts" time="3.24">
 </testcase>
 </testsuite>
 </testsuites>

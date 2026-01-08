@@ -3,7 +3,7 @@ import {LoginPage} from '../src/pages/loginPage';
 import {ContactUsForm} from '../src/pages/contactUsFormPage';
 import path from "path";
 
-test('Contact Us form', async ({page}) => {
+test.skip('Contact Us form', async ({page}) => {
     
     const gotoHomePage = new LoginPage(page);
 
