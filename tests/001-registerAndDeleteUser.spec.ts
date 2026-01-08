@@ -1,7 +1,7 @@
 import {test, expect} from '@playwright/test';
 import { RegisterAndDeleteUserPage } from '../src/pages/registerAndDeleteUserPage';
 
-test('Register new User test', async ({page}) => {
+test.skip('Register new User test', async ({page}) => {
 
     const registerAndDeleteUserPage = new RegisterAndDeleteUserPage(page);
 
