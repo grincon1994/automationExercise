@@ -1,0 +1,63 @@
+<testsuites id="" name="" tests="7" failures="1" skipped="0" errors="0" time="23.307005000000004">
+<testsuite name="001-registerAndDeleteUser.spec.ts" timestamp="2026-01-08T03:49:44.763Z" hostname="chromium" tests="1" failures="0" skipped="0" time="6.397" errors="0">
+<testcase name="Register new User test" classname="001-registerAndDeleteUser.spec.ts" time="6.397">
+</testcase>
+</testsuite>
+<testsuite name="002-Login.spec.ts" timestamp="2026-01-08T03:49:44.763Z" hostname="chromium" tests="2" failures="0" skipped="0" time="3.856" errors="0">
+<testcase name="login with correct credentials" classname="002-Login.spec.ts" time="2.223">
+</testcase>
+<testcase name="login with incorrect credentials" classname="002-Login.spec.ts" time="1.633">
+</testcase>
+</testsuite>
+<testsuite name="003-logoutAndRegisterWithSameEmail.spec.ts" timestamp="2026-01-08T03:49:44.763Z" hostname="chromium" tests="2" failures="0" skipped="0" time="4.591" errors="0">
+<testcase name="Login out of the account" classname="003-logoutAndRegisterWithSameEmail.spec.ts" time="2.057">
+</testcase>
+<testcase name="Register with same Email" classname="003-logoutAndRegisterWithSameEmail.spec.ts" time="2.534">
+</testcase>
+</testsuite>
+<testsuite name="004-contactUsFormAndTestCasesPage.spec.ts" timestamp="2026-01-08T03:49:44.763Z" hostname="chromium" tests="2" failures="1" skipped="0" time="6.415" errors="0">
+<testcase name="Contact Us form" classname="004-contactUsFormAndTestCasesPage.spec.ts" time="1.866">
+<failure message="004-contactUsFormAndTestCasesPage.spec.ts:6:5 Contact Us form" type="FAILURE">
+<![CDATA[  [chromium] › 004-contactUsFormAndTestCasesPage.spec.ts:6:5 › Contact Us form ─────────────────────
+
+    Error: expect(locator).toContainText(expected) failed
+
+    Locator: locator('.contact-form')
+    Expected substring: "Success! Your details have been submitted successfully."
+    Error: strict mode violation: locator('.contact-form') resolved to 2 elements:
+        1) <div class="contact-form">…</div> aka getByText('Note: Below contact form is for testing purpose. Get In Touch Submit')
+        2) <form method="post" name="contact-form" id="contact-us-form" action="/contact_us" class="contact-form row">…</form> aka locator('#contact-us-form')
+
+    Call log:
+      - Expect "toContainText" with timeout 5000ms
+      - waiting for locator('.contact-form')
+
+
+      34 |     await page.locator('.contact-form').getByRole('button', {name: 'Submit'}).click();
+      35 |
+    > 36 |     await expect(page.locator('.contact-form')).toContainText('Success! Your details have been submitted successfully.');
+         |                                                 ^
+      37 |
+      38 |     await page.locator('.navbar-nav .fa-home').click();
+      39 |
+        at C:\Users\grinc\Documents\Playwright-Course\automationExercise\tests\004-contactUsFormAndTestCasesPage.spec.ts:36:49
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\test-results\004-contactUsFormAndTestCasesPage-Contact-Us-form-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\test-results\004-contactUsFormAndTestCasesPage-Contact-Us-form-chromium\error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|004-contactUsFormAndTestCasesPage-Contact-Us-form-chromium\test-failed-1.png]]
+
+[[ATTACHMENT|004-contactUsFormAndTestCasesPage-Contact-Us-form-chromium\error-context.md]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Test Cases page" classname="004-contactUsFormAndTestCasesPage.spec.ts" time="4.549">
+</testcase>
+</testsuite>
+</testsuites>
