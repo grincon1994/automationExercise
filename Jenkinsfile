@@ -5,19 +5,12 @@ pipeline {
     stage('Install') {
       steps {
         bat '''
-          cd /d %WORKSPACE%
 
           echo ===== Installing dependencies =====
           npm ci
 
-          echo ===== Verifying Playwright install =====
-          dir node_modules\\@playwright
-
-          if not exist node_modules\\@playwright\\test (
-          echo "@playwright/test not installed!"
-          exit /b 1
-        )
-          npx playwright install 
+          echo ===== Installing Playwright browsers =====
+          npx playwright install chromium
         '''
       }
     }
@@ -25,7 +18,6 @@ pipeline {
     stage('Test') {
       steps {
         bat '''
-          cd /d %WORKSPACE%
           npm run test:ci
         '''
       }
