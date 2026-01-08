@@ -6,11 +6,13 @@ pipeline {
       steps {
         bat '''
 
+          cd /d %WORKSPACE%
+
           echo ===== Installing dependencies =====
           npm ci
 
           echo ===== Installing Playwright browsers =====
-          npx playwright install chromium
+          npx playwright install 
         '''
       }
     }
@@ -18,6 +20,7 @@ pipeline {
     stage('Test') {
       steps {
         bat '''
+          cd /d %WORKSPACE%
           npm run test:ci
         '''
       }
@@ -27,6 +30,8 @@ pipeline {
   post {
     always {
       bat '''
+
+      cd /d %WORKSPACE%
       echo ===== Workspace contents =====
       dir
       echo ===== test-results =====
@@ -34,10 +39,10 @@ pipeline {
       echo ===== playwright-report =====
       if exist playwright-report dir playwright-report
     '''
-      junit 'test-results/junit.xml'
+      junit allowEmptyResults: true, testResults: 'test-results/**/*.xml'
 
-      archiveArtifacts artifacts: 'playwright-report/**'
-      archiveArtifacts artifacts: 'test-results/**'
+      archiveArtifacts artifacts: 'playwright-report/**', allowEmptyResults: true
+      archiveArtifacts artifacts: 'test-results/**', allowEmptyResults: true
     }
   }
 }
