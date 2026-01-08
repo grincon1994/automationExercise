@@ -49,6 +49,12 @@ pipeline {
     '''
       junit testResults: 'test-results/**/*.xml', allowEmptyResults: true
 
+      script {
+      if (currentBuild.currentResult == 'UNSTABLE') {
+        error('Failing build because there are failing tests')
+      }
+    }
+
       archiveArtifacts artifacts: 'playwright-report/**', allowEmptyArchive: true
       archiveArtifacts artifacts: 'test-results/**', allowEmptyArchive: true
     }
