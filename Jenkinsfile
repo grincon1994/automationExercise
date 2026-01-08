@@ -9,7 +9,7 @@ pipeline {
           cd /d %WORKSPACE%
 
           echo ===== Installing Playwright browsers =====
-          npx playwright install --with-deps
+          npx playwright install chromium
 
           echo ===== Installing dependencies =====
           npm ci
