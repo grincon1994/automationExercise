@@ -5,7 +5,7 @@ test('Register new User test', async ({page}) => {
 
     const registerAndDeleteUserPage = new RegisterAndDeleteUserPage(page);
 
-    await registerAndDeleteUserPage.navigateToSignupPage('jo235rqew234h532n', 'joh53sh434ngr@ex2-34425ample.com');
+    await registerAndDeleteUserPage.navigateToSignupPage('jo235rqew234h532n', 'joh53sh43k4ngr@ex2-34425ample.com');
 
     await registerAndDeleteUserPage.fillAccountInformation(
         'password123',
@@ -21,14 +21,12 @@ test('Register new User test', async ({page}) => {
         '12345',
         '1234567890'
     );
-
-    page.on('dialog', async dialog => {
-        await dialog.dismiss();
-    })
     
     await expect(page.getByText('Account Created!')).toBeVisible();
 
     await page.waitForTimeout(500);
+
+    page.once('dialog',dialog => dialog.dismiss());
 
     await page.locator('.pull-right .btn-primary').click();
 

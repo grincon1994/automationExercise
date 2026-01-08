@@ -1,0 +1,90 @@
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e5]:
+      - link "Website for automation practice" [ref=e8] [cursor=pointer]:
+        - /url: /
+        - img "Website for automation practice" [ref=e9]
+      - list [ref=e12]:
+        - listitem [ref=e13]:
+          - link " Home" [ref=e14] [cursor=pointer]:
+            - /url: /
+            - generic [ref=e15]: 
+            - text: Home
+        - listitem [ref=e16]:
+          - link " Products" [ref=e17] [cursor=pointer]:
+            - /url: /products
+            - generic [ref=e18]: 
+            - text: Products
+        - listitem [ref=e19]:
+          - link " Cart" [ref=e20] [cursor=pointer]:
+            - /url: /view_cart
+            - generic [ref=e21]: 
+            - text: Cart
+        - listitem [ref=e22]:
+          - link " Signup / Login" [ref=e23] [cursor=pointer]:
+            - /url: /login
+            - generic [ref=e24]: 
+            - text: Signup / Login
+        - listitem [ref=e25]:
+          - link " Test Cases" [ref=e26] [cursor=pointer]:
+            - /url: /test_cases
+            - generic [ref=e27]: 
+            - text: Test Cases
+        - listitem [ref=e28]:
+          - link " API Testing" [ref=e29] [cursor=pointer]:
+            - /url: /api_list
+            - generic [ref=e30]: 
+            - text: API Testing
+        - listitem [ref=e31]:
+          - link " Video Tutorials" [ref=e32] [cursor=pointer]:
+            - /url: https://www.youtube.com/c/AutomationExercise
+            - generic [ref=e33]: 
+            - text: Video Tutorials
+        - listitem [ref=e34]:
+          - link " Contact us" [ref=e35] [cursor=pointer]:
+            - /url: /contact_us
+            - generic [ref=e36]: 
+            - text: Contact us
+  - generic [ref=e39]:
+    - generic [ref=e41]:
+      - heading "Login to your account" [level=2] [ref=e42]
+      - generic [ref=e43]:
+        - textbox "Email Address" [ref=e44]
+        - textbox "Password" [ref=e45]
+        - button "Login" [ref=e46] [cursor=pointer]
+    - heading "OR" [level=2] [ref=e48]
+    - generic [ref=e50]:
+      - heading "New User Signup!" [level=2] [ref=e51]
+      - generic [ref=e52]:
+        - textbox "Name" [ref=e53]: jo235rqew234h532n
+        - textbox "Email Address" [ref=e54]: joh53sh434ngr@ex2-34425ample.com
+        - paragraph [ref=e55]: Email Address already exist!
+        - button "Signup" [ref=e56] [cursor=pointer]
+  - contentinfo [ref=e57]:
+    - generic [ref=e62]:
+      - heading "Subscription" [level=2] [ref=e63]
+      - generic [ref=e64]:
+        - textbox "Your email address" [ref=e65]
+        - button "" [ref=e66] [cursor=pointer]:
+          - generic [ref=e67]: 
+        - paragraph [ref=e68]:
+          - text: Get the most recent updates from
+          - text: our site and be updated your self...
+    - paragraph [ref=e72]: Copyright © 2021 All rights reserved
+  - text: 
+  - insertion [ref=e73]:
+    - iframe [ref=e76]:
+      - iframe [ref=f13e1]:
+        - generic [ref=f15e2]:
+          - link "Advertisement" [ref=f15e4] [cursor=pointer]:
+            - /url: https://ad.doubleclick.net/pcs/click?xai=AKAOjsvnaDKqTaY-zne0hw94DdHIQU1dEDCBdF_LAY8JoxhneoM-S-Qv7wQav3QRrYhYgZvkyUhYQGWNCFtS58m0eqQD7cvMvqS0XZUWQkOvAvZVmY9_bBEs8qPCdZCVg2QVCmdkEMEGsMKk0-p_GzJIDgYVZ4ebFT70a-Cv-xb3hCigNLErdHmZhlNDsl6IOP20kDKq8UGZz_B6_7hUotGLjGI6OPSTTyBs9doaiDwiJd-eYvcmYQog_1IzZRdUEnquiamE43xWFJW8awnTesWJhbr5O38aJhvIhBYd0cRv8t4_7t0pANXOMa86Zx9NKLPYIubaKgF-UDTm2Q-hhX3VXPZpJ4-IW_1DgmcOr0zSOiGpWiPxODtXRWS9oLJwEZi14MGAAFlJFf6GdgCrPeDKGUFuAtrx2mJFqFYAcnWXqleexMZqgaSWDAxfpaZXFeFPAEdVFGN99pof4IF5aruXb18sekjt-ohXOiq5impWOotZDpiCdGSrRKPzSw8aHUqy5oUDhqHtLhr68LlKlsU8m-JzyzFc-SKjqZcLgBy1LuIMHhnb3GJrL8MYgxLNEjT1rJ0mGFFx5-eYfBq-N6QrilQGqGAnEGt5TDma2V7xnLJ2XztzYBFlSVqvrI3LY_pxflEAh8ARVJodJWeODXk2L1krlGSGiNIS8yTw1vAtsL1Rzwe2lvK3FmtJ0qKHJW9VGv_LA4rZ6Dfmxp6yAHNAX2nUwWRsQW5bBn6yhLIR_3HpvXDb8Wnrk2tPUD2JgZKeGP8sZtT9UBn7jIpUvfjjYxUuJEGzxhis1QB02BAHiGK3iRBDpE4LxknUlzXyfzBNKiqJpVmenILcd_mBLS6rqwOQuVESqIQ1iINKHABxJwvzAeEbUedoFwhnjuon5bBBQUlbF1hl-NXRVFWKT3y7umWJlVFIbvPDz5WzXAeRztIs_ajSl8nDObXv3nCRB0mv0JiF9WPRnQx3UQq1IZm9IbfHa44kMlVBLtBAMjFx0Tl8cjaPkhcqvHEGbsCervMuzdE0Lr6jh6dCYRagzAr9ypU0Q9jUII5RuSXlye2o3y5oydbYu-p0aMMXlcp4C4z9VjiyKNUK30deq3Cl5oEY1HumeWmT7wJ9qzebqQaRhoUa5eZvS5YDqaFzv0TzSav4-7jh-YU9ThKfdmsSs9Sp3PJuWdSOo_CjzN7ECI8VmjWiEufxkyUac7zGb2cORvQiXkRs9-98WjSrEzwpNlF-cXhEVAzycEIduMFEYzTDJ7izx_w4IuNS1_MpxArfOd9KcriLjtAYNo0BUXUada-gVbxPNDVK68glP_v1zBJl8uwiJAU0rMBxc17vFqOR_kpimN0xFPKfLfIWvQzBb8GVz3Yr8ClPF6qyuExkyOhGhnXWOp4vuMrBwcUjCFRDLiZJWdz6MaVnBX10-OhkAdCa42qi4Ox8yN_QVkeQVUWKAuCbIpPv4bT39MtTcKGQ4y_wSYEKZAemZlPwhIXVQmhjVoNDHNpBUIxLcTM7xbvDqLFH8UWimVlBTj4FHlwH2URBw3Vra_zJo2xc0cELg6Pf_AJZwD5B4Q&sai=AMfl-YR4gTfVYQaUi7-AnP1BcaPZf9uBuWLPf2-CdQrP-OBlfB79OCx1dY6FJKHc3636A1-AESF_sK2FHaEregoJyf-yZoC6AUEywo3Xwe8ogfLn-6aOCivxoAztDwrRTO9TVJxKjEAkkz6lpP5jrQqw8QjfCVB8PR0Dn0TJD4P9Zm4G0HruJp9DFajnBLyV7jwSjvs-nEIkRwK_-lO8v9Z6g9Xf1G3x5MaCfVXo2cJB6lg0PuAiJGc9xGPpn2-F5sX9h05LbktzwmblD-av2Utvtmt0R5OXF55aE1kV-J_sCn7fCok0vPj03z5j4IrhxPl64DRUkAuAM1eWZs9yQpbKFzGWp43U85h6nGrJfSKLoFSu_nvigzDtOSINSrSbPmHHbHu0EzPNuShG5lTPTGPnQBA8ZH0FvQtUZ_U-yAw9VboxqmmyuVnznmY4-xBjbmoGmNb_PYqED8yblT8PtyNDGlP5UvKJWHTUDCc_QyrJJHGxmZcQaQ9UjKiFNhZ432wcdetshGzwvPa2LjpVPnn-xQX1Zyj2R8Dpzt8_IBepREHa6yqdy-ZZ8Q0iSYYX88vAj7gzR7273ULgZkAHZWAHDjlw3RzI&sig=Cg0ArKJSzM_VimAEcnqs&fbs_aeid=%5Bgw_fbsaeid%5D&crd=aHR0cHM6Ly9maXZlcnIuY29t&urlfix=1&adurl=http://fiverr.com%3Fdclid%3D%25edclid!%26gad_source%3D7%26gad_campaignid%3D21015754076
+            - img "Advertisement" [ref=f15e5]
+          - generic [ref=f15e6]:
+            - generic:
+              - img [ref=f15e10] [cursor=pointer]
+              - button [ref=f15e13] [cursor=pointer]:
+                - img [ref=f15e14]
+```
