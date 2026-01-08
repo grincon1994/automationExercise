@@ -5,7 +5,7 @@ test('Register new User test', async ({page}) => {
 
     const registerAndDeleteUserPage = new RegisterAndDeleteUserPage(page);
 
-    await registerAndDeleteUserPage.navigateToSignupPage('jo235rqew234h532n', 'joh53sh434n@ex2-34425ample.com');
+    await registerAndDeleteUserPage.navigateToSignupPage('jo235rqew234h532n', 'joh53sh434ngr@ex2-34425ample.com');
 
     await registerAndDeleteUserPage.fillAccountInformation(
         'password123',
