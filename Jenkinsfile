@@ -6,7 +6,7 @@ pipeline {
       steps {
         bat '''
           cd /d %WORKSPACE%
-          
+
           echo ===== Installing dependencies =====
           npm ci
 
@@ -17,7 +17,7 @@ pipeline {
           echo "@playwright/test not installed!"
           exit /b 1
         )
-          npx playwright install --with-deps
+          npx playwright install 
         '''
       }
     }
