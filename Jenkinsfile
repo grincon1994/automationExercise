@@ -5,11 +5,16 @@ pipeline {
     stage('Install') {
       steps {
         bat '''
+          cd /d %WORKSPACE%
           set NODE_ENV=development
           set npm_config_production=false
           node -v
           npm -v
           npm ci
+
+          echo ===== Verifying Playwright install =====
+          dir node_modules\\@playwright
+          
           if not exist node_modules\\@playwright\\test (
           echo "@playwright/test not installed!"
           exit /b 1
@@ -22,6 +27,7 @@ pipeline {
     stage('Test') {
       steps {
         bat '''
+          cd /d %WORKSPACE%
           npm run test:ci
         '''
       }
